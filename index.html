@@ -9,6 +9,48 @@
 </head>
 <body>
      
+
+
+    <div class="container">
+        <h1><i class="fa-solid fa-language icon"></i>Multilangual Dictionary</h1>
+        <div class="input-group">
+            <input type="text" id="wordinput" placeholder="Enter a word or sentence">
+
+            <select  id="language-select">
+                <option value="en">en English</option>
+                <option value="IN">In Hindi</option>
+                <option value="IN">In Marathi</option>
+                <option vlaue="ES">Es Spanish</option>
+                <option value="Fr">Fr French</option>
+                <option value="Ge">Ge German</option>
+                <option value="ja">ja Japanese</option>
+                <option value="ko">ko Korean</option>
+            </select>
+
+            <button id="microphoneBtm" onclick="togglSpeechRecognition()">
+                <i class="fas fa-microphone icon"></i>
+                <span id="mic-test">Speak now</span>
+            </button>
+        </div>
+
+        <button onclick="searchwords()"><i class="fas fa-search "></i>Search</button>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <div id="speechModal" class="speech-model">
+        <div class="speech-modal-content">
+            <div class="speech-modal-header">
+                <h2>Speak Now</h2>
+                <button id="closeMoelBtn" onclick="closespeechModal()">&times;</button>
+            </div>
+            <div class="speech-modal-body">
+                <p>Listening.....</p>
+            </div>
+        </div>
+    </div>
     
 
 
