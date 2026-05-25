@@ -82,3 +82,15 @@ async function searchwords(){
 
 }
 
+function getLanguageName(code){
+    const lan={
+        'en':'English',
+        'ne':'Nepali',
+        'es':'Spanish',
+        'fr':'French',
+        'de':'German',
+        'ja':'Japanese',
+        'ko':'Korean'
+    };
+    return lan[code] || code;
+}
