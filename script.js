@@ -94,3 +94,60 @@ function getLanguageName(code){
     };
     return lan[code] || code;
 }
+
+
+function toggleSpeechRecognition(){
+
+    const modal = document.getElementById('speechModal');
+
+    modal.style.display = 'flex';
+
+    startSpeechRecognition();
+
+}
+
+
+function closespeechModal(){
+     const modal = document.getElementById('speechModal');
+     modal.style.display='none';
+}
+
+
+function startSpeechRecognition(){
+
+
+    const selectedlan = document.getElementById('language-select').value;
+
+    const langMap = {
+
+        'en':'en-US',
+        'ne':'ne-NP',
+        'es':'es-ES',
+        'fr':'fr-FR',
+        'de':'de-DE',
+        'ja':'ja-JP',
+        'ko':'ko-KR'
+
+    };
+
+    const recognize= new webkitSpeechRecognition();
+    recognize.lang = langMap[selectedlan] || 'en-US';
+    recognize.interimResults = false;
+
+    recognize.onresult = function(event){
+        const result = event.results[0][0].transcript;
+        document.getElementById('wordinput').value = result;
+        closespeechModal(); 
+    }
+
+    recognize.onerror = function(event){
+        console.error('speech reco error:', event.error);
+        closespeechModal();
+    }
+
+    recognize.onend = function(){
+        console.log('Speech recognition ended.');
+    }
+
+    recognize.start();
+}
