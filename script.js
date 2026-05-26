@@ -74,10 +74,11 @@ async function searchwords(){
         resultDiv.textContent =`An error occured: ${error.message}`;
     }   
 
-}else{
+}
+   
+    else{
         location.reload();
     }
-   
 
 
 }
