@@ -9,5 +9,9 @@ web audio API for translation from voice.
 - CSS : CSS is used in this project to sytle the HTML elements and make the web app look interactive also to add input text etc
 - JS : JS is used in this project to call the API and get the data.
 
+# Note:
+I have deplyod all of mine project through netlify which i have sumbited till now unitl expect one and my free trail of netlify has been full of limit so my website is down in netlify so i have uploaded it from github pages so you can cehck it out from here 
+
+
  # How to use it :
- TO use this Web App you just have to visti https://samriddha-sabdhakos.netlify.app/ and all set .
+ TO use this Web App you just have to visti https://samriddha-poudel.github.io/Dictionary/ and all set .
